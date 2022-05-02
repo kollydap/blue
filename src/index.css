@@ -1,0 +1,24 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding:0;
+  background-color: #f8f9fa;
+  color: #272b41;
+}
+.block{
+  display: block;
+}
+.patb5{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.ratings >.MuiSvgIcon-root{
+  color: #f4c150;
+  font-size: 24px;
+  font-weight: 900;
+}

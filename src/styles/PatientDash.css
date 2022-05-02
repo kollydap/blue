@@ -1,0 +1,274 @@
+.patient__content{
+    padding: 30px 0 0;
+    min-height: 402.667px;
+
+}
+.patient__fluid{
+    padding-left: 30px;
+    padding-right: 30px;
+    
+}
+.patient__flex{
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+    flex-wrap: wrap;
+}
+.patient__left{
+    padding-right: 15px;
+    padding-left: 15px; 
+    overflow: visible;
+    min-height: 1px;
+    width:30%;
+
+    
+    
+}
+.patient__left__container{
+    padding-top: 0px;
+    padding-bottom: 1px;
+    position: static;
+    transform: none;
+}
+
+.patient__profile-sidebar {
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.patient__widget-profile{
+    background-color: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 20px;
+    text-align: center;
+}
+.profile__info{
+    text-align: center;
+}
+.profile__info > div> h3{
+    font-size: 17px;
+    color: #272b41;
+    font-weight: 500;
+}
+.profile__info > div> div >h5{
+    color: #757575;
+font-size: 13px;
+font-weight: normal;
+margin-bottom: 8px;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+
+}
+.patient__menu{
+    color: #757575;
+    font-size: 14px;
+    line-height: 17px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+.patient__menu > li{
+    border-bottom: 1px solid #f0f0f0;
+    position: relative;
+    line-height: inherit;
+}
+
+.patient__menu > li >div{
+    color: #757575;
+    display: block;
+    padding: 16px 20px;
+}
+.unread-msg {
+    background-color: #09e5ab;
+    border-radius: 2px;
+    color: #272b41;
+    font-size: 10px;
+    font-style: normal;
+    padding: 0 5px;
+    position: absolute;
+    right: 20px;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+li > .abc > .link{
+    text-decoration: none;
+    color: inherit;    
+}
+
+/* RIGHT   SIDE */
+.patient__right{
+    position: relative;
+    width:70%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.right__card{
+    border: 1px solid #f0f0f0;
+    margin-bottom: 1.875rem;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0.25rem;
+}
+.right__card-body{
+    padding:1.5rem;
+    flex: 1 1 auto;
+    min-height: 1px;
+    word-wrap: break-word;
+}
+form > .form-row{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+.form-row > .form-col {
+    padding: 0 5px;
+}
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group > .change-avatar{
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+}
+.change-avatar > .profile-img{
+    margin-right: 15px;
+}
+.profile-img > img{
+    border-radius: 4px;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    vertical-align: middle;
+    border-style: none;
+}
+.upload-img > .change-photo-btn{
+    margin: 0 0 10px;
+    width: 150px;
+    background-color: #20c0f3;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 10px 15px;
+    position: relative;
+    transition: .3s;
+    text-align: center;
+}
+
+.upload-img > small{
+    font-size: 12px !important;
+    font-weight: 400;
+    color: #757575 ;
+}
+.change-photo-btn > .upload{
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    margin: 0;
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 220px;
+    overflow:visible ;
+}
+.form-row{
+    word-wrap: break-word;
+}
+.form-row > .form-col-input{
+   
+    padding-right: 5px;
+    padding-left: 5px;
+   
+    /* it has media query
+    flex: 0 0 50%;
+    max-width: 50%; */
+}
+
+label{
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.form-control{
+    border-color: #dcdcdc;
+    color: #333;
+    font-size: 15px;
+    min-height: 46px;
+    padding: 6px 15px;
+    display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.abc > .MuiSvgIcon-root{
+    margin-right: 5px;
+}
+
+.patient-submit > button{
+    padding: 10px 20px;
+    font-size: 15px;
+    min-width: 105px;
+    font-weight: 600;
+    background-color: #09e5ab;
+    border: 1px solid #09e5ab;
+    color: #fff;
+}
+
+/* todo: adjust the width of patient right and patient left */
+
+@media (max-width:880px) {
+    .patient__right{
+        width:60%;      
+    }
+    .patient__left{
+        width:40%;
+    }
+  
+}
+@media (max-width:670px) {
+    .patient__right{
+        width:100%;      
+    }
+    .patient__left{
+        width:100%;
+        position: sticky;
+    }
+  
+}
+@media (max-width:400px) {
+    .patient__fluid{
+        padding: 0 10px;     
+    }
+    /* .patient__left{
+        padding:5px;
+    }
+    .patient__right{
+        padding: 5px;
+    } */
+  
+}
