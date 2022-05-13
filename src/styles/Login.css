@@ -1,59 +1,151 @@
-.login{
+.offset{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 90px;
+}
+
+.nav-pop{
+    padding: 20px;
+    width: 250px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+.nav-in{
+    margin-bottom: 5px;
+    padding: 7px;
+    border-radius: 5px;
+}   
+.nav-pop :hover{
+    background-color: #f0f0f0;
+    border-bottom: 2px solid #e4dede;
+
+}
+
+.account-row{
+    align-items: center!important;
+    justify-content: center!important;
     display: flex;
-    padding: 50px 0px;
-    height: 100vh;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.account-left{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.account-left > img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.account-right{
     background-color: #fff;
-    justify-content: center;
-    align-items: center;
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    padding: 25px;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-.login > div > img{
-    max-height: 300px;
+.account-header{
+    margin-bottom: 20px;
+}
+.account-header > h3{
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.account-right > form{
+    display: block;
+    margin-top: 0em;
+    
 }
 
-.login > form{
-    
-    padding:10px 50px;
-}
-.input-container{
+.account-but{
+    padding:10px;
     width: 100%;
-    padding:0.5px;
-}
-.input-container > input{
-    padding: 10px;
-    width: 100%;
-    margin-bottom: 10px;
-    border:1px solid #dcdcdc;
-    
-}
-.button-container > button{
-    padding:5px 20px;
+    margin:10px 0;
     background-color: #09e5ab;
-    border:2px solid #09e5ab;
-    color:#fff;
-    width: 100%;
+    border: 1px solid #09e5ab;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: #fff;
+}
+.social-buttons{
+    margin-top: 10px;
+    display:flex;
+    justify-content: space-between;
+}
+.social-but{
+    padding:10px;
+    width: 48%;
+    margin-bottom:10px;
+    background-color: #09e5ab;
+    border: none;
+    line-height: 1.5;
+    border-radius: 0.3rem;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+}
+.dont-have{
+    text-align: center;
+}
+.dont-have > a{
+    color: #09e5ab;
+    text-decoration: none;
+    
+}
 
+@media (min-width: 992px){
+.account-left {
+    flex: 0 0 50%;
+    max-width: 40%;
+}
+.account-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
+
+
+@media (min-width: 768px){
+.account-left {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 47%;
+}
+.offset{
+    margin-left: 16.666667%;
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%
+}
+.account-right{
+    flex: 0 0 100%;
+   
+}
+}
+
+@media (max-width: 1000px){
+    .account-left{
+        display: none;
+    }
+}
+@media (max-width:478px) {
+    .account-header{
+        text-align: center;
+    }
+    .offset{
+        padding-top: 20px;
+    }
 }
 
 
 
-@media(max-width:880px){
-    .login{
-        flex-direction: column;
-        padding: 0px 40px;
-    }
-    .login > div > img{
-        max-height: 350px;
-    }
-    .login > form{
-        width: 100%;
-        padding:100px 0px;
-        margin: 0 100px;
-    }
-
-}
-@media(max-width:435px){
-    .login > div > img{
-        max-height: 200px;
-    }
-}

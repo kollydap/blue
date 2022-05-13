@@ -8,8 +8,7 @@ import ChatIcon from '@material-ui/icons/Chat';
 import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import  ThumbUpAlt  from '@material-ui/icons/ThumbUpAlt';
 import { Link } from 'react-router-dom';
-import { Call, ChatBubbleOutline, ChatBubbleOutlined, VideoCall } from '@material-ui/icons';
-import axiosInstance from '../axios'
+import { Call, ChatBubbleOutline,  VideoCall } from '@material-ui/icons';
 import axios from "axios"
 import {useNavigate} from 'react-router-dom'
 import Login from "../components/Login"
@@ -38,7 +37,7 @@ function SingleDoctor() {
             setSingleDoctor(res.data)
         })        
       },[])
-
+      console.log(singleDoctor)
     return (
       
         <div className='single__doctor'>
@@ -83,31 +82,37 @@ function SingleDoctor() {
                     <p>{singleDoctor.about}</p>
                 </div>
                 <br />
-                <div className='education doc-info'>
+                <div className=' doc-info'>
                     <h4>Education</h4>
                     
-                    {/* {(singleDoctor.education).map(singledoctor =>{
-                        const{id,college,course,degree,yearBegin,yearEnded}=singledoctor
+                    {/* {(singleDoctor.education).map(singledoctorEducation =>{
+                        const{id,college,course,degree,startDate,endDate}=singledoctorEducation
                         return(<div key={id}>
-                        <h5>{degree}</h5>
-                    <h6>{yearBegin}-{yearEnded}</h6>
+                        <p>{degree}</p>
+                    <p>{startDate}-{endDate}</p>
                     <br />
-                    <h4>{college}</h4>
+                    <p>{college}</p>
                 
                             </div>)
                     })} */}
                     
                 </div>
-
-                <div className='experience doc-info'>
-                    <h4>Work & Experience</h4>
-                    <h3>American Dental Medical University</h3>
-                    <h5>BDS</h5>
-                    <h6>1998-2003</h6>
                     <br />
-                    <h3>American Dental Medical University</h3>
-                    <h6>BDS</h6>
-                    <h6>1998-2003</h6>
+                    <br />
+                <div className=' doc-info'>
+                    <h4>Work & Experience</h4>
+                    <div style={{padding:"5px 0"}}>
+                    <p>American Dental Medical University</p>
+                    <p>BDS</p>
+                    <p>1998-2003</p>
+                    </div>
+
+                    <div style={{padding:"5px 0"}}>
+                    <p>American Dental Medical University</p>
+                    <p>BDS</p>
+                    <p>1998-2003</p>
+                    </div>
+                    
                 </div>
             </div>
              </>

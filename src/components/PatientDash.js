@@ -22,10 +22,10 @@ useEffect(()=>{
 
   return (
 
-    <div className='patient__content'>
+    <div className='content'>
       {!token ?(<Login />) :(
-        <div className='patient__fluid'>
-            <div className='patient__flex'>
+        <div className='fluid'>
+            <div className='flex'>
           
            <PatientLeft />
                 <Routes>

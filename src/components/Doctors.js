@@ -4,16 +4,22 @@ import React,{useState, useEffect} from 'react'
 import {Link} from "react-router-dom"
 import '../styles/Doctor.css'
 
+import CircularProgress from '@mui/material/CircularProgress';
 import Carousel from 'react-elastic-carousel';
 
 function Doctors (){
   
+  
   let [doctors, setDoctors]=useState([])
+  let [loader, setLoader]=useState(true)
 
   useEffect(()=>{
     fetch("https://kolacare.herokuapp.com/api/doctor/")
     .then (response => response.json())
-    .then(data => setDoctors(data))
+    .then(data => {setDoctors(data);
+    setLoader(false)
+    })
+    
   },[])
  
   const breakPoints = [
@@ -27,14 +33,28 @@ console.log(typeof(localStorage.getItem('access_token')))
     <div className='doctor-section'>
         <div className='doctor-fluid'>
             <div className='doctor-row'>
-            <Carousel breakPoints={breakPoints}>
+              
+                
+            {loader && <div style={{textAlign:"center"}}>
+            
+            <CircularProgress style={{color:"#20c0f3"}} />
+            <br />
+              Fetching Doctors...
+         
+              </div> }
+              { doctors &&
+              
+            <Carousel breakPoints={breakPoints} transitionMs={1000} autoPlaySpeed={2000}>
              {
                doctors.map(doctor =>{
                  const {id,photo,location,schedule,pricings,fullname,myeducation} = doctor
               
                  return(
+
+               
                   
                    <Link key={id} to={`doctor/${id}`} >
+                 
                     <div  className="doctor-card">
                    <img src={photo} alt ="doctor "/>
                     <div className='card-body'>
@@ -57,6 +77,7 @@ console.log(typeof(localStorage.getItem('access_token')))
                })
              }
                </Carousel>
+}
               
             </div>
         </div>

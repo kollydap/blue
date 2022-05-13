@@ -28,7 +28,7 @@
     border:1px solid #ccc;
 }
 
-.appointment-bottom > form > button{
+.custom-but{
     padding: 7px 20px;
     background-color: #20c0f3;
     color: #fff;

@@ -1,14 +1,16 @@
-.patient__content{
+.content{
     padding: 30px 0 0;
-    min-height: 402.667px;
+    min-height: 100vh;
+    background-color: #fff;
+    
 
 }
-.patient__fluid{
+.fluid{
     padding-left: 30px;
     padding-right: 30px;
     
 }
-.patient__flex{
+.flex{
     display: flex;
     margin-right: -15px;
     margin-left: -15px;

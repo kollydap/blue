@@ -92,19 +92,7 @@ form > .search-info{
 .form-text{
     color: #757575;
 }
-.jYxeHE{
-    background-color: #20c0f3;
-    box-shadow: #20c0f3 0px 0px 1px 3px
-}
-.hJKYRZ{
-    background-color: #20c0f3;
-}
-/* .hJJzxj */
-.hJJzxj:hover:enabled, .hJJzxj:focus:enabled {
-    color: rgb(255, 255, 255);
-    background-color: #20c0f3;
-    box-shadow: rgb(51 51 51) 0px 0px 2px 0px;
-}
+
 @media (max-width:850px) {
     .bannerHeader > h1{
         font-size: 25px;
@@ -122,6 +110,9 @@ form > .search-info{
     }
     .search-box > form >button{
         width: 100%;
+        margin-top: 3px;
+        padding:8px 15px;
+
     }
     form > button >h6{
         display:block;
@@ -131,6 +122,9 @@ form > .search-info{
     }
 }
 @media (max-width:420px) {
+    .welcome{
+        display: none;
+      }
     .bannerHeader > h1{
         font-size: 20px;
         
@@ -141,4 +135,8 @@ form > .search-info{
     .containerFluid{
         padding: 0 15px;
     }
+    .rec .rec-arrow{
+        display: none;
+      
+      }
 }

@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import '../styles/Appointment.css'
 import StarIcon from '@material-ui/icons/Star';
+import axios from 'axios'
 
 function Appointment() {
   let id = useParams().id;
@@ -9,16 +10,38 @@ function Appointment() {
   let[doctor,setDoctor] =useState([])
   let [patient,setPatient]=useState([])
   let [appointmentDate, setAppointmentDate]=useState("")
-  
+  const [loggedUserId, setLoggedUserId]=useState("")
 
     useEffect(()=>{
-      fetch(`https://kolacare.herokuapp.com/api/doctor/${id}`)
-      .then (response => response.json())
-      .then(data => setDoctor(data))  
+      axios.get(`https://kolacare.herokuapp.com/api/doctor/${id}`,
+        {
+            headers:{
+                Authorization:localStorage.getItem('access_token')
+                ? 'JWT ' + localStorage.getItem('access_token')
+                : null,
+                'Content-Type': 'application/json',
+                accept: 'application/json'
+            }
+        })
+        .then((res)=>{
+            setDoctor(res.data)
+        })        
 
-      fetch(` https://kolacare.herokuapp.com/api/patient/1`)
-      .then (response => response.json())
-      .then(data => setPatient(data))
+      axios.get(`https://kolacare.herokuapp.com/api/account/getuser/`,
+      {
+          headers:{
+              Authorization:localStorage.getItem('access_token')
+              ? 'JWT ' + localStorage.getItem('access_token')
+              : null,
+              'Content-Type': 'application/json',
+              accept: 'application/json'
+          }
+      })
+      .then((res)=>{
+        setLoggedUserId(res.data.id)
+      })
+
+
      
   },[])
 
@@ -31,13 +54,13 @@ function Appointment() {
         'Content-Type':'application/json',
       },
       mode: 'cors',
-      body:JSON.stringify({"doctor":doctor.id,"patient":patient.id, "appointment_time":appointmentDate})
+      body:JSON.stringify({"doctor":doctor.id,"patient":loggedUserId, "appointment_time":appointmentDate})
     },
     )
-    // alert(`${doctor.fullname} will get back you soon, Thank you`)
-    alert("You need to be a registered user to make appointments")
+    alert(`${doctor.fullname} will get back to you soon`)
       e.preventDefault()
   }
+  console.log(doctor)
  
   return (
     <div className='appointment'>
@@ -56,7 +79,7 @@ function Appointment() {
             <input type="date"
             onChange={(e)=>setAppointmentDate(e.target.value)}
             />
-            <button onClick={createAppointment}>make Appointment</button>
+            <button className='custom-but' onClick={createAppointment}>make Appointment</button>
           </form>
 
         </div>

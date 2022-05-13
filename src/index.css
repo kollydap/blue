@@ -22,3 +22,10 @@ body {
   font-size: 24px;
   font-weight: 900;
 }
+.welcome{
+  margin-right:30px ;
+}
+.rec .rec-arrow{
+  padding:0px;
+  background-color:#fff;
+}
