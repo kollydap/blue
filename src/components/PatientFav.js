@@ -8,7 +8,7 @@ function PatientFav() {
     let [doctors, setDoctors]=useState([])
 
   useEffect(()=>{
-    fetch("https://kolacare.herokuapp.com/api/doctor/")
+    fetch("http://127.0.0.1:8000/api/doctor/")
     .then (response => response.json())
     .then(data => setDoctors(data))
   },[])
